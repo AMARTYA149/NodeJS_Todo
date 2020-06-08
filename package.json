@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-todo",
+  "version": "1.0.0",
+  "description": "TODO Project using NodeJS, Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amartya",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
