@@ -54,6 +54,16 @@ h1 {
     border-top: 1px solid lightgrey;
 }
 
+/* need hover styling */
+/* 
+.task:hover{
+    background-color: aliceblue;
+}
+
+input:hover, select:hover{
+    background-color: aliceblue;
+} */
+
 .task > div{
     width: 95%;
     margin: auto;
