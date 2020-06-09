@@ -20,10 +20,15 @@ app.get('/', function(request, response){
 });
 
 app.post('/create-todo', function(request, response){
+    // console.log(request.body);
+    // console.log("todo desc: ", request.body.task_name);
+    // console.log("category: ", request.body.category);
+    // console.log("date: ", request.body.date);
+    // return response.redirect('back');
     Todo.create({
-        todoDesc: request.body.task_name
-        // category: request.body.category
-        // date: request.body.date
+        todoDesc: request.body.task_name,
+        category: request.body.category,
+        date: request.body.date
     }, function(err, newTodo){
         if(err){
             console.log('error in creating todo!');

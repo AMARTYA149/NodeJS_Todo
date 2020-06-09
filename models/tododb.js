@@ -6,12 +6,12 @@ const todoSchema = new mongoose.Schema({
         required: true
     },
     category: {
-        type: String
-        // required: true
+        type: String,
+        required: true
     },
-    data: {
-        type: Date
-        // required: true
+    date: {
+        type: Date,
+        required: true
     }
 });
 
