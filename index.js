@@ -14,9 +14,21 @@ app.use(express.urlencoded());
 app.use(express.static('assets'));
 
 app.get('/', function(request, response){
-    return response.render('home', {
-        title: "TODO App"
-    });
+    // return response.render('home', {
+    //     title: "TODO App"
+    // });
+
+    Todo.find({}, function(err, todo ){
+        if(err)
+        {
+            console.log('Error in fetching Todos from DB');
+            return;
+        }
+        return response.render('home', {
+            title: "TODO App",
+            todo_list: todo
+        });
+    })
 });
 
 app.post('/create-todo', function(request, response){

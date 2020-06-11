@@ -154,3 +154,62 @@ input:hover, select:hover{
 {
     padding-right: 4%;
 }
+
+
+/* todo displat section */
+#display_sect
+{
+    width: 90%;
+    height: auto;
+    /* background-color: aqua; */
+    padding: 1% 0%;
+    border-bottom: 1px solid lightgray;
+    margin: auto;
+}
+
+.display_item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    /* background-color: green; */
+    margin: auto;
+    /* line-height: 50px; */
+    vertical-align: middle;
+    
+}
+
+.category_tag_cont{
+    display: table-cell; 
+    vertical-align: middle; 
+    height: 50px; 
+    width: 100px;
+    /* background-color: red; */
+}
+
+.category_tag{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.work{
+    background-color: blueviolet;
+}
+
+.personal{
+    background-color: purple;
+}
+
+.cleaning {
+    background-color: navy;
+}
+
+.other{
+    background-color: salmon;
+}

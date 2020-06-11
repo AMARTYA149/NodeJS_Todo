@@ -69,6 +69,42 @@
             </div>
         </div>
         </form>
+
+    <div>
+        <% for(let i of todo_list) {%> 
+        <div id="display_sect">            
+            <div class="display_item">
+                <div>
+                    <input type="checkbox" name="item1" id="">
+                <label for="item1">
+                    <%= i.todoDesc %>
+                </label>
+                <p> <%= i.date %></p>
+                </div>
+                <div class="category_tag_cont">
+                <div class="category_tag <%= i.category %>">
+                    <p> <%= i.category %></p>
+                </div> 
+                </div>                      
+            </div>           
+        </div>
+        <%}%>
+
+        <!-- <div id="display_sect">            
+            <div class="display_item">
+                <div>
+                    <input type="checkbox" name="item1" id="">
+                <label for="item1">Item 1</label>
+                </div>
+                <div class="category_tag_cont">
+                <div class="category_tag">
+                    <p>Work</p>
+                </div> 
+                </div>                      
+            </div>           
+        </div> -->
+    </div>
+
     </div>
     <script src="/js/script.js"></script>
 </body>
