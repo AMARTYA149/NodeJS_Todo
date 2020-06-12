@@ -13,6 +13,8 @@ app.set('views', './views');
 app.use(express.urlencoded());
 app.use(express.static('assets'));
 
+
+//fetching all todos from db
 app.get('/', function(request, response){
     // return response.render('home', {
     //     title: "TODO App"
@@ -31,6 +33,8 @@ app.get('/', function(request, response){
     })
 });
 
+
+//create todo item
 app.post('/create-todo', function(request, response){
     // console.log(request.body);
     // console.log("todo desc: ", request.body.task_name);
@@ -51,7 +55,23 @@ app.post('/create-todo', function(request, response){
     });
 });
 
+//for deleting todo from db
+app.get('/delete-todo', function(request, response){
 
+    //get the id from query in the url
+    let id = request.query.id;
+
+    //find the todo in the database using id and delete
+    Todo.findByIdAndDelete(id, function(err){
+        if(err){
+            console.log('Error in deleting an object from database');
+            return;
+        }
+        return response.redirect('back');
+    });
+});
+
+//listening from port 
 app.listen(port, function(err){
     if(err)
     {

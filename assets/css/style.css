@@ -198,6 +198,15 @@ input:hover, select:hover{
     color: white;
 }
 
+.delete_btn{
+    background-color: red;
+}
+
+.delete_btn > a{
+    text-decoration: none;
+    color: white;
+}
+
 .work{
     background-color: blueviolet;
 }

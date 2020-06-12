@@ -85,7 +85,12 @@
                 <div class="category_tag <%= i.category %>">
                     <p> <%= i.category %></p>
                 </div> 
-                </div>                      
+                </div> 
+                
+                    <div class=" category_tag delete_btn">
+                        <a href="/delete-todo/?id=<%= i._id %>"> <p><i class="fa fa-trash padding-right"></i>DELETE</p></a>                      
+                    </div> 
+                                       
             </div>           
         </div>
         <%}%>
