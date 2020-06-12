@@ -24,7 +24,7 @@
             </div>
          
             <div class="task_input_cont">
-                <input type="text" name="task_name" class="input_style" placeholder="What do you want to do?" required>
+                <input type="text" name="task_name" class="input_style" placeholder="What do you want to do?" required  autocomplete="off">
             </div>  
             </div>            
         </div>
@@ -37,7 +37,7 @@
                 </div>
              
                 <div class="task_input_cont">
-                    <select name="category" id="category" class="input_style" required>
+                    <select name="category" id="category" class="input_style" required  autocomplete="off">
                         <option value="" disabled selected hidden>Please Choose...</option>
                         <option value="personal">Personal</option>
                         <option value="work">Work</option>
@@ -53,7 +53,7 @@
                 </div>
              
                 <div class="task_input_cont">
-                    <input type="text" id="datepicker" placeholder="Enter Date" class="input_style" name="date" required>
+                    <input type="text" id="datepicker" placeholder="Enter Date" class="input_style" name="date" required  autocomplete="off">
                 </div>  
             </div> 
             </div>
@@ -63,9 +63,9 @@
             <div class="flex_cont">
             <button type="submit" id="sub_btn" class="btn_style"><i class="fa fa-plus padding-right"></i>ADD TASK</button>
 
-            <div id="delete_btn" class="btn_style">
+            <!-- <div id="delete_btn" class="btn_style">
                 <p><i class="fa fa-trash padding-right"></i>DELETE TASK</p>
-            </div>
+            </div> -->
             </div>
         </div>
         </form>
@@ -75,21 +75,24 @@
         <div id="display_sect">            
             <div class="display_item">
                 <div>
-                    <input type="checkbox" name="item1" id="">
-                <label for="item1">
+                    <!-- <input type="checkbox" name="item1" > -->
+                    <!-- <input class="check" type="checkbox" name="id" value="<%= i._id %>" /> -->
+                <!-- <label for="item1">
                     <%= i.todoDesc %>
-                </label>
-                <p> <%= i.date %></p>
+                </label> -->
+                <p><i class="fa fa-check" aria-hidden="true"></i> <%= i.todoDesc %></p>
+                <p><i class="fa fa-calendar" aria-hidden="true"></i> <%= i.date.toDateString() %></p>
                 </div>
                 <div class="category_tag_cont">
                 <div class="category_tag <%= i.category %>">
                     <p> <%= i.category %></p>
-                </div> 
+                </div>
+                <div class=" category_tag delete_btn">
+                    <a href="/delete-todo/?id=<%= i._id %>"> <p><i class="fa fa-trash padding-right"></i>DELETE</p></a>                      
+                </div>  
                 </div> 
                 
-                    <div class=" category_tag delete_btn">
-                        <a href="/delete-todo/?id=<%= i._id %>"> <p><i class="fa fa-trash padding-right"></i>DELETE</p></a>                      
-                    </div> 
+                    
                                        
             </div>           
         </div>

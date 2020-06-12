@@ -61,6 +61,7 @@ app.get('/delete-todo', function(request, response){
     //get the id from query in the url
     let id = request.query.id;
 
+
     //find the todo in the database using id and delete
     Todo.findByIdAndDelete(id, function(err){
         if(err){
@@ -69,6 +70,14 @@ app.get('/delete-todo', function(request, response){
         }
         return response.redirect('back');
     });
+    // Todo.deleteMany({_id:{$in:request.body.id}}, function(err, todo) {
+    //     if (err) {
+    //       console.error(err);
+    //       return response.redirect('back');
+    //     } else {
+    //       return response.redirect('back');
+    //     }
+    //   });
 });
 
 //listening from port 

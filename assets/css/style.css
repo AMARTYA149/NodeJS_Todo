@@ -180,10 +180,10 @@ input:hover, select:hover{
 }
 
 .category_tag_cont{
-    display: table-cell; 
-    vertical-align: middle; 
+    display: flex;
+    justify-content: space-between;
     height: 50px; 
-    width: 100px;
+    min-width: 220px;
     /* background-color: red; */
 }
 
